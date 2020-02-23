@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" style="width: 300px; height: 300px; background-color: red">
+
+    </div>
+    <div>
+        Pilih warna box :
+        <select id="color-list">
+            <option value="red" checked>Red</option>
+            <option value="green" checked>Green</option>
+            <option value="blue" checked>Blue</option>
+            <option value="yellow" checked>Yellow</option>
+            <option value="pink" checked>Pink</option>
+        </select>
+    </div> <br>
+
+    <div>
+        Pilih ukuran box :
+        <select id="size-list">
+            <option value="200" checked>200</option>
+            <option value="400" checked>400</option>
+            <option value="500" checked>500</option>
+        </select>
+    </div> <br>
+
+    <div>
+        Tampilkan box :
+        <select id="display">
+            <option value="show" checked>Show</option>
+            <option value="hide" checked>Hide</option>
+        </select>
+    </div>
+
+    <!-- <script>
+        var box = document.getElementById("box");
+        var colorList = document.getElementById("color-list");
+        colorList.addEventListener('change', function(event){
+            box.style.backgroundColor = event.target.value;
+        });
+    </script> -->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
+    <script>
+        $(document).ready(function(){
+            var box = $("#box");
+            var colorList = $("#color-list")
+            var sizeList = $("#size-list")
+            var boxShow = $("#display")
+
+            //color
+            colorList.on('change', function(eventSelect){
+                box.css('background-color', eventSelect.target.value);
+            });
+
+            //size
+            sizeList.on('change', function(eventSelect){
+                box.css('width', eventSelect.target.value);
+                box.css('height', eventSelect.target.value);
+            });
+
+            //display
+            boxShow.on('change', function(eventSelect){
+                if (eventSelect.target.value == "show"){
+                    // box.css('display', 'block');
+                    // box.css('opacity', 1);
+                    box.show();
+                } else {
+                    // box.css('display', 'none');
+                    // box.css('opacity', 0);
+                    box.hide();
+                }
+            });
+        });
+    </script>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $("#color-list").on('change', function(){
+                var a = $("#color-list").val();
+                $("#box").css("background-color", a)
+            });
+        });
+        $(document).ready(function(){
+            $("#size-list").on('change', function(){
+                var b = $("#size-list").val();
+                $("#box").css({
+                    'width' : b+'px',
+                    'height' : b+'px'
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("#display").on('change', function(){
+                var c = $("#display").val();
+                if (c == "show") {
+                    $("#box").show();
+                } else{
+                    $("#box").hide();
+                }
+            });
+        });
+    </script> -->
+</body>
+</html>
