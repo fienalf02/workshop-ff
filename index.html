@@ -1,111 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+<html><head>
+    <!-- Fill with title and name -->
+    <title>
+        My Resume
+    </title>
+    <meta name="author" content="Fifien Alfini" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <!-- Fill with styling and icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="fifien.png">
+    <link rel="stylesheet" href="https://themes.gohugo.io/theme/pulp/style.min.a50e85be2191b7446e684667eb002377b10f833f329c30d9b701ea188a664750.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Fill with meta description -->
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="Your favorite resume text" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://themes.gohugo.io//theme/pulp/" />
+    <meta property="og:updated_time" content="2020-02-23T00:00:00+00:00" />
+    <meta itemprop="name" content="Fifien Alfini">
+    <meta itemprop="description" content="Tak ada usaha = tak ada peluang">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="@yourusername"/>
+    <meta name="twitter:description" content="Your favorite resume text"/>
+    <style type="text/css">
+    body {
+      background-color: #2a6785;
+      color: white;
+    }
+    a:link {
+      color: white;
+    }
+    a:visited {
+      color: white;
+    }
+    a:hover {
+      color: #c9c9c9;
+    }
+    </style>
+
+    <!--[if lte IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
 <body>
-    <div id="box" style="width: 300px; height: 300px; background-color: red">
-
-    </div>
-    <div>
-        Pilih warna box :
-        <select id="color-list">
-            <option value="red" checked>Red</option>
-            <option value="green" checked>Green</option>
-            <option value="blue" checked>Blue</option>
-            <option value="yellow" checked>Yellow</option>
-            <option value="pink" checked>Pink</option>
-        </select>
-    </div> <br>
-
-    <div>
-        Pilih ukuran box :
-        <select id="size-list">
-            <option value="200" checked>200</option>
-            <option value="400" checked>400</option>
-            <option value="500" checked>500</option>
-        </select>
-    </div> <br>
-
-    <div>
-        Tampilkan box :
-        <select id="display">
-            <option value="show" checked>Show</option>
-            <option value="hide" checked>Hide</option>
-        </select>
-    </div>
-
-    <!-- <script>
-        var box = document.getElementById("box");
-        var colorList = document.getElementById("color-list");
-        colorList.addEventListener('change', function(event){
-            box.style.backgroundColor = event.target.value;
-        });
-    </script> -->
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
-    <script>
-        $(document).ready(function(){
-            var box = $("#box");
-            var colorList = $("#color-list")
-            var sizeList = $("#size-list")
-            var boxShow = $("#display")
-
-            //color
-            colorList.on('change', function(eventSelect){
-                box.css('background-color', eventSelect.target.value);
-            });
-
-            //size
-            sizeList.on('change', function(eventSelect){
-                box.css('width', eventSelect.target.value);
-                box.css('height', eventSelect.target.value);
-            });
-
-            //display
-            boxShow.on('change', function(eventSelect){
-                if (eventSelect.target.value == "show"){
-                    // box.css('display', 'block');
-                    // box.css('opacity', 1);
-                    box.show();
-                } else {
-                    // box.css('display', 'none');
-                    // box.css('opacity', 0);
-                    box.hide();
-                }
-            });
-        });
-    </script>
-
-    <!-- <script>
-        $(document).ready(function(){
-            $("#color-list").on('change', function(){
-                var a = $("#color-list").val();
-                $("#box").css("background-color", a)
-            });
-        });
-        $(document).ready(function(){
-            $("#size-list").on('change', function(){
-                var b = $("#size-list").val();
-                $("#box").css({
-                    'width' : b+'px',
-                    'height' : b+'px'
-                });
-            });
-        });
-        $(document).ready(function(){
-            $("#display").on('change', function(){
-                var c = $("#display").val();
-                if (c == "show") {
-                    $("#box").show();
-                } else{
-                    $("#box").hide();
-                }
-            });
-        });
-    </script> -->
+    <div id="profileContainer">
+      <div id="profile">
+        <header>
+            <div class="avatar">
+                <!--profile-->
+                <img class="avatarMask" src="fifien.png" alt="avatar">
+                <!--border-->
+                <img src="https://themes.gohugo.io//theme/pulp/img/avatar-border.svg" alt="avatar-border">
+            </div>
+          
+            <h1 class="author">
+                Fifien Alfini
+            </h1>
+            <p>
+              Cirebon, 02 Mei 2002
+            </p>
+        </header>
+        <p>
+          "Tak ada usaha = tak ada peluang"
+        </p>
+        
+        <nav>
+          <ul>
+            <li><a href="https://www.facebook.com/FienZet.Design" aria-label="blog"><i class='fab fa-facebook fa-lg'></i><br></a></li>
+            <li><a href="https://www.instagram.com/fienalf02/" aria-label="instagram"><i class='fab fa-instagram fa-lg'></i><br></a></li>
+            <li><a href="https://github.com/fienalf02" aria-label="github"><i class='fab fa-github fa-lg'></i><br></a></li>
+            <li><a href="mailto:fifienalfinie@gmail.com" aria-label="email"><i class='fa fa-envelope fa-lg'></i><br></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div><footer>
+  <p>
+    &copy; 2020 Fifien Alfini.
+    Copied from <a href="https://github.com/ans-4175/crb-dev-deploy">pulp</a> theme.
+  </p>
+</footer>
 </body>
 </html>
